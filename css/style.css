@@ -47,7 +47,7 @@ header{
 .landing-page{
     height: 100vh;
     width: 100%;
-    background: url(/images/bg-first.png);
+    background-image: url(/images/bg-first.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
