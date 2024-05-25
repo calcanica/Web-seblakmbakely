@@ -477,6 +477,9 @@ header{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    body{
+        width: 100vw;
+    }
     header nav.navigation{
         width: 600px;
     }
