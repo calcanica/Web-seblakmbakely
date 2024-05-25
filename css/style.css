@@ -47,7 +47,7 @@ header{
 .landing-page{
     height: 100vh;
     width: 100%;
-    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-first.png);
+    background: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-first.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -88,7 +88,7 @@ header{
     border-radius: 15px;
     background-color: #31cf12;
     box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
--webkit-box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
+    -webkit-box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
     -moz-box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
     transition: .5s;
 }
@@ -96,6 +96,9 @@ header{
     background-color: #2ab00f;
 }
 /* Seblak */
+.xs-menu-row-container{
+    display: none;
+}
 .seblak{
     height: 230vh;
     width: 100%;
@@ -392,87 +395,86 @@ header{
     padding: 0 100px;
 }
 
-    /* Menu Section Xs*/
-    .xs-menu-row-container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-        padding: 15px 0;
-    }
-    /* Kartu Maroon */
-    .xs-menu-card.maroon{
-        background-color: #A20405;
-        padding: 30px 5px;
-        border-radius: 15px;
-        width: 299px;
-        height: 343px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-        -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-        -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-    }
-    .xs-menu-judulSeblak.maroon{
-        margin: 15px 0 0 0;
-        font-weight: 800;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color:#fff;
-    }
-    .xs-menu-isi.maroon{
-        padding: 0 25px;
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 0;
-        color: #fff;
-    }
-    .xs-menu-harga.maroon{
-        font-weight: 800;
-        font-size: 2rem;
-        color: #FFFC00;
-    }
-    /* Kartu Putih xs */
-    .xs-menu-card.white{
-        background-color: #fff;
-        padding: 30px 5px;
-        border-radius: 15px;
-        width: 299px;
-        height: 343px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-        -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-        -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
-    }
-    .xs-menu-judulSeblak.white{
-        margin: 15px 0 0 0;
-        font-weight: 800;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: #1f1f1f;;
-    }
-    .xs-menu-isi.white{
-        padding: 0 25px;
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 0;
-        color: #1f1f1f;
-    }
-    .xs-menu-harga.white{
-        font-weight: 800;
-        font-size: 2rem;
-        color: #760F0F;
-    }
+/* Menu Section Xs*/
+.xs-menu-row-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 15px 0;
+}
+/* Kartu Maroon */
+.xs-menu-card.maroon{
+    background-color: #A20405;
+    padding: 30px 5px;
+    border-radius: 15px;
+    width: 299px;
+    height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+}
+.xs-menu-judulSeblak.maroon{
+    margin: 15px 0 0 0;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+.xs-menu-isi.maroon{
+    padding: 0 25px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: #fff;
+}
+.xs-menu-harga.maroon{
+    font-weight: 800;
+    font-size: 2rem;
+    color: #FFFC00;
+}
+/* Kartu Putih xs */
+.xs-menu-card.white{
+    background-color: #fff;
+    padding: 30px 5px;
+    border-radius: 15px;
+    width: 299px;
+    height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+}
+.xs-menu-judulSeblak.white{
+    margin: 15px 0 0 0;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #1f1f1f;;
+}
+.xs-menu-isi.white{
+    padding: 0 25px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: #1f1f1f;
+}
+.xs-menu-harga.white{
+    font-weight: 800;
+    font-size: 2rem;
+    color: #760F0F;
+}
 
-    .xs-img-menuSeblak{
-        width: 150px;
-    }
-
+.xs-img-menuSeblak{
+    width: 150px;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     header nav.navigation{
@@ -481,7 +483,7 @@ header{
     #logo{
         width: 100px;
     }
-    /* Seblak Section */
+    /* Seblak */
     .seblak{
         height: 260vh;
     }
@@ -554,145 +556,15 @@ header{
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-    .menu-row-container{
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    .xs-menu-row-container{
         display: none;
-    }
-
-    /* Header */
-    header nav.navigation{
-        width: 768px;
-        padding: 0 50px;
-    }
-    /* Seblak */
-    .element-cabeHijau{
-        display: none;
-    }
-    #deskripsi-img{
-        width: 200px;
-        left: 100px;
-    }
-    .deskripsi-text{
-        width: 40%;
-    }
-
-    /* Topping */
-    .topping-row{
-        gap: 20px;
-    }
-    .topping-imgSelf{
-        width: 110px;
-    }
-    .harga-custom{
-        width: 80%;
-    }
-    /* Minuman */
-    .minuman{
-        background-position: top;
-    }
-    .minuman-img{
-        display: none;
-    }
-    .minuman-fill{
-        width: 80%;
-        padding: 25px;
-    }
-    .minuman-column{
-        font-size: 1.6rem;
-    }
-    /* Kontak Section*/
-    .kontak-fill{
-        width: 100%;
-        flex-direction: column;
-    }
-    .kontak-detail{
-        padding: 0;;
-        font-size: 1.5rem;
-    }
-    .kontak-detail a{
-        margin: 0;
-    }
-    .credit{
-        padding-bottom: 30px;
-    }
-
- }
- @media only screen and (max-width: 992px) {
-    .menu-row-container{
-        display: none;
-    }
-
-    /* Header */
-    header nav.navigation{
-        width: 768px;
-        padding: 0 50px;
-    }
-    /* Seblak */
-    .element-cabeHijau{
-        display: none;
-    }
-    #deskripsi-img{
-        width: 200px;
-        left: 100px;
-    }
-    .deskripsi-text{
-        width: 40%;
-    }
-
-    /* Topping */
-    .topping-row{
-        gap: 20px;
-    }
-    .topping-imgSelf{
-        width: 110px;
-    }
-    .harga-custom{
-        width: 80%;
-    }
-    /* Minuman */
-    .minuman{
-        background-position: top;
-        height: 65vh;
-    }
-    .minuman-img{
-        display: none;
-    }
-    .minuman-fill{
-        width: 80%;
-        padding: 25px;
-    }
-    .minuman-column{
-        font-size: 1.6rem;
-    }
-    /* Kontak Section*/
-    .kontak{
-        height: fit-content;
-    }
-    .kontak-fill{
-        width: 100%;
-        flex-direction: column;
-    }
-    .kontak-detail{
-        padding: 0;;
-        font-size: 1.5rem;
-    }
-    .kontak-detail a{
-        margin: 0;
-    }
-    .credit{
-        padding-bottom: 30px;
     }
  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-.xs-menu-row-container{
-    display: none;
-}
- }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
- }
+}
