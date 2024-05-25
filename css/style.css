@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-color: #eaeaea;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/* Navigation Bar */
+header{
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+#logo{
+    width: 150px;
+    cursor: none;
+}
+.navigation .nav a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 15px 15px;
+    border-radius: 30px;
+    transition: .5s;
+}
+.navigation .nav a:hover{
+    background-color: #A20405;
+    color: #fff;
+}
+
+/* Landing Page */
+.landing-page{
+    height: 100vh;
+    width: 100%;
+    background: url(/images/bg-first.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#landing-img{
+    width: 30%;
+}
+.landing-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.landing-text h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1f1f1f;
+    text-transform: uppercase;
+    margin: 0;
+}
+.landing-text p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+.landing-text a, .kontak-detail a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #31cf12;
+    box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
+-webkit-box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
+    -moz-box-shadow: 9px 4px 27px -7px rgba(49,207,18,0.77);
+    transition: .5s;
+}
+.landing-text a:hover{
+    background-color: #2ab00f;
+}
+/* Seblak */
+.seblak{
+    height: 230vh;
+    width: 100%;
+    background-image: url(/images/bg-menu.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.deskripsi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 195px;
+    padding-bottom: 195px;
+}
+.deskripsi-blank{
+    width: 10%;
+}
+#deskripsi-img{
+    width: 20%;
+    position: absolute;
+    left: 282px;
+    z-index: 1;
+}
+.deskripsi-text{
+    position: relative;
+    width: 30%;
+    background-color: #FA6700;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 25px 25px 25px 110px;
+    color: #fff;
+}
+.deskripsi-text h2{
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+}
+.deskripsi-text h3{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.deskripsi-text p{
+    font-size: 1.2rem;
+}
+#element-cabeMerah{
+    position: absolute;
+    width: 270px;
+    right: -170px;
+    top: 120px;
+}
+/* Menu */
+.menu{
+    position: relative;
+}
+.menu-title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color:#A20405;
+}
+/* Menu Row */
+.menu-row-container{
+    position: relative;
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+/* Kartu Maroon */
+.menu-card.maroon{
+    background-color: #A20405;
+    border-radius: 15px;
+    width: 299px;
+    height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+}
+.menu-judulSeblak.maroon{
+    padding-top: 105px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:#fff;
+    margin-bottom: 0;
+}
+.menu-isi.maroon{
+    padding: 0 25px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: #fff;
+}
+.menu-harga.maroon{
+    font-weight: 800;
+    font-size: 2rem;
+    color: #FFFC00;
+}
+/* Kartu Putih */
+.menu-card.white{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 299px;
+    height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+}
+.menu-judulSeblak.white{
+    padding-top: 105px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:#1f1f1f;
+    margin-bottom: 0;
+}
+.menu-isi.white{
+    padding: 0 25px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: #1f1f1f;
+}
+.menu-harga.white{
+    font-weight: 800;
+    font-size: 2rem;
+    color: #A20405;
+}
+.img-menuSeblak{
+    position: absolute;
+    top: 10px;
+    width: 160px;
+}
+.element-cabeHijau{
+    position: absolute;
+    bottom: -500px;
+    right: -250px;
+    width: 750px;
+    transform: rotate(35deg);
+}
+/* Topping Section */
+.topping{
+    height: 230vh;
+    width: 100%;
+    background-image: url(/images/bg-topping.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.topping-title{
+    padding: 15px 100px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:#fff;
+}
+.topping-row{
+    padding: 20px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.topping-card{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topping-image{
+    background-color: #760F0F;
+    border-radius: 10px;
+    padding: 0px 15px;
+}
+.topping-imgSelf{
+    width: 200px;
+}
+.topping-text h3{
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 15px 0 0 0;
+}
+.topping-text .harga{
+    color:#FFFC00;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 5px 0 0 0;
+}
+.harga-custom{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #fff;
+}
+.harga-custom p{
+    margin: 2px 0 0 0;
+}
+.harga-toppingCustom{
+    color:#FFFC00;
+}
+/* Minuman */
+.minuman{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/bg-minuman.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minuman-fill{
+    width: 50%;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    padding: 15px 10px 35px 35px;
+    color: #fff;
+    backdrop-filter: blur(7px);
+
+}
+.minuman-title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:#fff;
+}
+.minuman-row{
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.minuman-column{  
+    width: 45%;  
+    display: flex;
+    justify-content: space-between;
+}
+.minuman-img{
+    width: 30%;
+}
+.minuman-harga{
+    color:#FFFC00;
+}
+/* Kontak */
+.kontak{
+    height: 100vh;
+}
+.kontak-title{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:#1f1f1f;
+    padding-top: 15px;
+}
+.kontak-fill{
+    padding: 35px 100px;
+    display: flex;
+    justify-content: center;
+}
+.kontak-detail{
+    padding: 0 70px;
+    width: 50%;
+    font-size: 1.2rem;
+    color: #1f1f1f;
+}
+.credit{
+    color: #1f1f1f;
+    padding: 0 100px;
+}
+
+    /* Menu Section Xs*/
+    .xs-menu-row-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 15px 0;
+    }
+    /* Kartu Maroon */
+    .xs-menu-card.maroon{
+        background-color: #A20405;
+        padding: 30px 5px;
+        border-radius: 15px;
+        width: 299px;
+        height: 343px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+        -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+        -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    }
+    .xs-menu-judulSeblak.maroon{
+        margin: 15px 0 0 0;
+        font-weight: 800;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color:#fff;
+    }
+    .xs-menu-isi.maroon{
+        padding: 0 25px;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+        color: #fff;
+    }
+    .xs-menu-harga.maroon{
+        font-weight: 800;
+        font-size: 2rem;
+        color: #FFFC00;
+    }
+    /* Kartu Putih xs */
+    .xs-menu-card.white{
+        background-color: #fff;
+        padding: 30px 5px;
+        border-radius: 15px;
+        width: 299px;
+        height: 343px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+        -webkit-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+        -moz-box-shadow: -1px 1px 42px -12px rgba(31,31,31,0.5);
+    }
+    .xs-menu-judulSeblak.white{
+        margin: 15px 0 0 0;
+        font-weight: 800;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: #1f1f1f;;
+    }
+    .xs-menu-isi.white{
+        padding: 0 25px;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+        color: #1f1f1f;
+    }
+    .xs-menu-harga.white{
+        font-weight: 800;
+        font-size: 2rem;
+        color: #760F0F;
+    }
+
+    .xs-img-menuSeblak{
+        width: 150px;
+    }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header nav.navigation{
+        width: 600px;
+    }
+    #logo{
+        width: 100px;
+    }
+    /* Seblak Section */
+    .seblak{
+        height: 260vh;
+    }
+    #deskripsi-img{
+        width: 220px;
+        left: 70px;
+    }
+    .deskripsi{
+        padding: 100px 0;
+    }
+    .deskripsi-text{
+        width: 300px;
+    }
+    .menu-row-container{
+        display: none;
+    }
+    .element-cabeHijau{
+        display: none;
+    }
+    #element-cabeMerah{
+        width: 250px;
+    }
+    /* Topping Section */
+    .topping{
+        height: 170vh;
+    }
+    .topping-row{
+        gap: 20px;
+    }
+    .topping-imgSelf{
+        width: 110px;
+    }
+    .harga-custom{
+        width: 80%;
+    }
+    /* Minuman */
+    .minuman{
+        background-position: top;
+        height: 90vh;
+        
+    }
+    .minuman-img{
+        display: none;
+    }
+    .minuman-fill{
+        width: 80%;
+        padding: 25px;
+    }
+    .minuman-column{
+        font-size: 1.6rem;
+    }
+    /* Kontak Section*/
+    .kontak{
+        height: fit-content;
+    }
+    .kontak-fill{
+        width: 100%;
+        flex-direction: column;
+    }
+    .kontak-detail{
+        padding: 0;;
+        font-size: 1.5rem;
+    }
+    .kontak-detail a{
+        margin: 0;
+    }
+    .credit{
+        padding-bottom: 30px;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .menu-row-container{
+        display: none;
+    }
+
+    /* Header */
+    header nav.navigation{
+        width: 768px;
+        padding: 0 50px;
+    }
+    /* Seblak */
+    .element-cabeHijau{
+        display: none;
+    }
+    #deskripsi-img{
+        width: 200px;
+        left: 100px;
+    }
+    .deskripsi-text{
+        width: 40%;
+    }
+
+    /* Topping */
+    .topping-row{
+        gap: 20px;
+    }
+    .topping-imgSelf{
+        width: 110px;
+    }
+    .harga-custom{
+        width: 80%;
+    }
+    /* Minuman */
+    .minuman{
+        background-position: top;
+    }
+    .minuman-img{
+        display: none;
+    }
+    .minuman-fill{
+        width: 80%;
+        padding: 25px;
+    }
+    .minuman-column{
+        font-size: 1.6rem;
+    }
+    /* Kontak Section*/
+    .kontak-fill{
+        width: 100%;
+        flex-direction: column;
+    }
+    .kontak-detail{
+        padding: 0;;
+        font-size: 1.5rem;
+    }
+    .kontak-detail a{
+        margin: 0;
+    }
+    .credit{
+        padding-bottom: 30px;
+    }
+
+ }
+ @media only screen and (max-width: 992px) {
+    .menu-row-container{
+        display: none;
+    }
+
+    /* Header */
+    header nav.navigation{
+        width: 768px;
+        padding: 0 50px;
+    }
+    /* Seblak */
+    .element-cabeHijau{
+        display: none;
+    }
+    #deskripsi-img{
+        width: 200px;
+        left: 100px;
+    }
+    .deskripsi-text{
+        width: 40%;
+    }
+
+    /* Topping */
+    .topping-row{
+        gap: 20px;
+    }
+    .topping-imgSelf{
+        width: 110px;
+    }
+    .harga-custom{
+        width: 80%;
+    }
+    /* Minuman */
+    .minuman{
+        background-position: top;
+        height: 65vh;
+    }
+    .minuman-img{
+        display: none;
+    }
+    .minuman-fill{
+        width: 80%;
+        padding: 25px;
+    }
+    .minuman-column{
+        font-size: 1.6rem;
+    }
+    /* Kontak Section*/
+    .kontak{
+        height: fit-content;
+    }
+    .kontak-fill{
+        width: 100%;
+        flex-direction: column;
+    }
+    .kontak-detail{
+        padding: 0;;
+        font-size: 1.5rem;
+    }
+    .kontak-detail a{
+        margin: 0;
+    }
+    .credit{
+        padding-bottom: 30px;
+    }
+ }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.xs-menu-row-container{
+    display: none;
+}
+ }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+ }
