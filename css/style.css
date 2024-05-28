@@ -237,8 +237,9 @@ button#btn-close{
 
 /* Topping Section */
 .topping{
+    background-color: #A20405;
     background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping.png);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 10em;
@@ -303,9 +304,9 @@ button#btn-close{
     color: #fff;
     background-color: #A20405;
     background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-minuman.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,10 +364,14 @@ button#btn-close{
 }
 .kontak-container iframe{
     width: 35%;
+    height: 300px;
 }
 .kontak-text {
     padding: 0 2em;
     font-size: 1.1rem;
+}
+.credit{
+    padding: 0 3em;
 }
 @media only screen and (min-width: 601px) {
     .menu-list{
@@ -388,8 +393,6 @@ button#btn-close{
     .seblak-text h3{
         font-size: 1rem;
     }
-
-
     /* Seblak Section */
     #seblak{
         flex-direction: column;
@@ -415,10 +418,10 @@ button#btn-close{
         width: 60vw;
     }
     .deskripsi-text h1{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .deskripsi-text p{ 
-        font-size: .8rem;
+        font-size: 1rem;
     }
     /* Menu Seblak Section */
     #menu-seblak{
@@ -439,9 +442,11 @@ button#btn-close{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid #760F0F;
+        padding: .5em 0;
     }
     .menu-list-seblak h1{
-        margin: 0;
+        margin-bottom: .3em;
         color: #A20405;
         text-transform: uppercase;
         font-size: 1rem;
@@ -450,12 +455,12 @@ button#btn-close{
     .menu-list-seblak p{
         margin: 0;
         color: #1f1f1f;
-        font-size: .6rem;
-        line-height: 1.5em;
+        font-size: .8rem;
+        line-height: 1rem;
     }
     .menu-list-harga{
         font-weight: 800;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         color: #A20405;
     }
     /* Topping Section */
@@ -463,6 +468,7 @@ button#btn-close{
         background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping-sm.png);
         background-position: bottom;
         background-size: contain;
+        background-repeat: no-repeat;
         background-color: #A20405;
     }
     .topping-title h1,
@@ -505,7 +511,12 @@ button#btn-close{
         width: 85%;
     }
     .kontak-text a{
-        width: 100%;
+        font-size: 1rem;
+        line-height: 1em;
+    }
+    .credit{
+        margin-top: 5em;
+        text-align: center;
         font-size: .8rem;
     }
 
