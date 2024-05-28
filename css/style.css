@@ -116,7 +116,8 @@ button#btn-close{
     margin-bottom: 2em;
     margin-top: 0;
 }
-.seblak-text a{
+.seblak-text a,
+.kontak-text a{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -125,7 +126,8 @@ button#btn-close{
     background-color: #31CF12;
     transition: .5s;
 }
-.seblak-text a:hover{
+.seblak-text a:hover,
+.kontak-text a:hover{
     background-color: #29ac0f;
 }
 /* Menu Seblak Section */
@@ -134,6 +136,7 @@ button#btn-close{
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 3em;
 }
 .deskripsi{
     padding-top: 5rem;
@@ -230,6 +233,141 @@ button#btn-close{
 .menu-harga.white{
     color: #A20405;
 }
+
+
+/* Topping Section */
+.topping{
+    background-image: url(/images/bg-topping.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10em;
+}
+.topping-title{
+    padding: 3em 5em;
+}
+.topping-title h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.topping-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin-bottom: 2em;
+}
+.topping-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+
+}
+.topping-card h1{
+    font-size: 1.3rem;
+    margin: .5rem;
+    text-align: center;
+
+}
+.topping-harga {
+    color: #FFFC00;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.topping-custom{
+    padding: 0 .7em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topping-custom h1{
+    margin-top: .2em;
+    font-weight: 500;
+}
+.topping-img{
+    height: 15vmax;
+    background-color: #760F0F;
+    border-radius: 1rem;
+    padding: .8em;
+}
+/* Minuman Section */
+.minuman{
+    color: #fff;
+    background-color: #A20405;
+    background-image: url(/images/bg-minuman.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10em;
+    padding-top: 10em;
+}
+.minuman-img{
+    height: 40vmax;
+}
+.minuman-title h1,
+.kontak-title h1{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.minuman-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+    background-color: rgba(118, 15, 15,.5);
+    backdrop-filter: blur(3px);
+    border-radius: 1em;
+    border: 2px solid #fff;
+    margin-top: 1em;
+    padding: 1em 2em;
+    width: 40vmax;
+}
+.minuman-text h2{
+    font-size: 1.3rem;
+}
+.minuman-harga{
+    color: #FFFC00;
+}
+
+/* Kontak Section */
+.kontak{
+    background-color: #760F0F;
+    color: #fff;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.kontak-title h1{
+    text-align: center;
+}
+
+.kontak-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 0 2em;
+}
+.kontak-container iframe{
+    width: 35%;
+}
+.kontak-text {
+    padding: 0 2em;
+    font-size: 1.1rem;
+}
 @media only screen and (min-width: 601px) {
     .menu-list{
         display: none;
@@ -237,6 +375,21 @@ button#btn-close{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    #nav{
+        width: 45%;
+    }
+    .seblak-text{
+        padding: 0;
+    }
+    .seblak-text h1{
+        line-height: 1em;
+        font-size: 2rem;
+    }
+    .seblak-text h3{
+        font-size: 1rem;
+    }
+
+
     /* Seblak Section */
     #seblak{
         flex-direction: column;
@@ -262,10 +415,10 @@ button#btn-close{
         width: 60vw;
     }
     .deskripsi-text h1{
-        font-size: 25px;
+        font-size: 1.3rem;
     }
     .deskripsi-text p{ 
-        font-size: 15px;
+        font-size: .8rem;
     }
     /* Menu Seblak Section */
     #menu-seblak{
@@ -274,7 +427,7 @@ button#btn-close{
     }
     .menu-title h1{
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .menu-row{
         display: none;
@@ -297,11 +450,62 @@ button#btn-close{
         margin: 0;
         color: #1f1f1f;
         font-size: .6rem;
-        line-height: 1em;
+        line-height: 1.5em;
     }
     .menu-list-harga{
         font-weight: 800;
         font-size: 1.1rem;
         color: #A20405;
     }
+    /* Topping Section */
+    .topping{
+        background-image: url(/images/bg-topping-sm.png);
+        background-position: bottom;
+        background-size: contain;
+        background-color: #A20405;
+    }
+    .topping-title h1,
+    .minuman-title h1,
+    .kontak-title h1{
+        margin: 0;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .topping-card h1,
+    .minuman-nama h2,
+    .minuman-harga h2,
+    .kontak-text p{
+        font-size: 1rem;
+    }
+    .topping-harga{
+        font-size: 1rem;
+    }
+
+    /* Minuman Section */
+    .minuman{
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        padding: 3em 0;
+    }
+    .minuman-text{
+        border: none;
+        background-color: transparent;
+    }
+    .minuman-img{
+        display: none;
+    }
+    /* Kontak Section */
+    .kontak-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .kontak-container iframe{
+        width: 85%;
+    }
+    .kontak-text a{
+        width: 100%;
+        font-size: .8rem;
+    }
+
 }
