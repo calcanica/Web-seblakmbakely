@@ -373,6 +373,23 @@ button#btn-close{
 .credit{
     padding: 0 3em;
 }
+@media only screen and (max-width: 800px) {
+    .seblak-text{
+        padding: 2em;
+    }
+    .seblak-text h1{
+        font-size: 2.3em;
+    }
+    .deskripsi{
+        padding: 2em;
+    }
+    .menu-text h1{
+        font-size: 1.3rem;
+    }
+    .menu-text p{
+        font-size:1rem;
+    }
+}
 @media only screen and (min-width: 601px) {
     .menu-list{
         display: none;
