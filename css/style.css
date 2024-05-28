@@ -85,7 +85,7 @@ button#btn-close{
 /* Seblak Section */
 #seblak{
     height: 100vh;
-    background-image: url(/images/bg-seblak.png);
+    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-seblak.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,7 +132,7 @@ button#btn-close{
 }
 /* Menu Seblak Section */
 #menu-seblak{
-    background-image: url(/images/bg-menu.png);
+    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-menu.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,7 +237,7 @@ button#btn-close{
 
 /* Topping Section */
 .topping{
-    background-image: url(/images/bg-topping.png);
+    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,7 +302,7 @@ button#btn-close{
 .minuman{
     color: #fff;
     background-color: #A20405;
-    background-image: url(/images/bg-minuman.png);
+    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-minuman.png);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -460,7 +460,7 @@ button#btn-close{
     }
     /* Topping Section */
     .topping{
-        background-image: url(/images/bg-topping-sm.png);
+        background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping-sm.png);
         background-position: bottom;
         background-size: contain;
         background-color: #A20405;
