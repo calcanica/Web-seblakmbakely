@@ -85,7 +85,7 @@ button#btn-close{
 /* Seblak Section */
 #seblak{
     height: 100vh;
-    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-seblak.png);
+    background-image: url("../images/bg1.jpg");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
