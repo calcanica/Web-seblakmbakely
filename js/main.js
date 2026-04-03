@@ -76,16 +76,16 @@ if(formOrder) {
             btnSubmit.innerHTML = "<i class='fa-solid fa-spinner fa-spin'></i> Memproses...";
             btnSubmit.disabled = true;
 
-            let textTelegram = `🛎 *PESANAN & CHECKOUT BARU* 🛎\n\n`;
-            textTelegram += `👤 *Pemesan:* ${nama}\n`;
-            textTelegram += `📞 *No. WA:* ${notelp}\n`;
-            textTelegram += `🏠 *Alamat:* ${alamat}\n\n`;
-            textTelegram += `🛒 *Rincian Pesanan:*\n`;
+            let textTelegram = `*PESANAN & CHECKOUT BARU*\n\n`;
+            textTelegram += `*Pemesan:* ${nama}\n`;
+            textTelegram += `*No. WA:* ${notelp}\n`;
+            textTelegram += `*Alamat:* ${alamat}\n\n`;
+            textTelegram += `*Rincian Pesanan:*\n`;
             textTelegram += `- Seblak: ${namaSeblak}\n`;
             textTelegram += `- Topping: ${stringTopping}\n`;
             textTelegram += `- Minuman: ${namaMinuman}\n\n`;
-            textTelegram += `💰 *Total Dibayar:* Rp ${totalBelanja.toLocaleString('id-ID')}\n`;
-            textTelegram += `⚠️ *Status:* Menunggu Pembeli Kirim Bukti Transfer.`;
+            textTelegram += `*Total Dibayar:* Rp ${totalBelanja.toLocaleString('id-ID')}\n`;
+            textTelegram += `*Status:* Menunggu Pembeli Kirim Bukti Transfer.`;
 
             sendMessage(textTelegram, btnSubmit, originalText);
         }
