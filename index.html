@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/Seblak Mbak Ely (1).png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
     <link rel="stylesheet" href="css/style.css">
-    
     <title>Seblak Mbak Ely - Pesan Online</title>
 </head>
 <body>  
@@ -22,152 +19,166 @@
                 <a href="#menu-seblak">Seblak</a>
                 <a href="#topping">Topping</a>
                 <a href="#minuman">Minuman</a>
-                <a href="#kontak">Pesan</a>
+                <a href="#kontak" class="nav-btn-order">Order Now</a>
             </div>
         </nav>
     </header>
 
-    <section id="seblak">
-        <div class="seblak">
-            <img src="images/mangkuk-putih.png" alt="Seblak Mangkuk Putih">
-            <div class="seblak-text">
-                <h1>Seblak Mbak Ely</h1>
-                <h3>“Rasakan seblak pedas menggoyang lidah”</h3>
-                <a href="#kontak" class="btn-pesan"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a>
+    <section id="hero-banner" class="animate-on-scroll">
+        <div class="hero-wrapper">
+            <div class="hero-image-side">
+                <div class="circle-frame">
+                    <img src="images/mangkuk-putih.png" alt="Seblak Mangkuk Putih" class="main-bowl">
+                </div>
+                <img src="images/telur.jpeg" class="floating-deco deco-1" alt="deco">
+                <img src="images/sosis standar.jpg" class="floating-deco deco-2" alt="deco">
             </div>
+            
+            <div class="hero-text-side">
+                <h1>SENSASI PEDAS<br>SEBLAK JUARA!</h1>
+                <p>Rasakan kuah kental pedas yang menggoyang lidah. Temukan perpaduan topping kesukaanmu di sini.</p>
+                <div class="promo-badge">
+                    <span class="small-text">Mulai dari</span>
+                    <span class="big-text">Rp 12.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-categories animate-on-scroll">
+        <div class="category-box">
+            <i class="fa-solid fa-fire"></i>
+            <p>Seblak Ori</p>
+        </div>
+        <div class="category-box">
+            <i class="fa-solid fa-hotdog"></i>
+            <p>Spesial Sosis</p>
+        </div>
+        <div class="category-box">
+            <i class="fa-solid fa-bowl-food"></i>
+            <p>Seafood</p>
+        </div>
+        <div class="category-box">
+            <i class="fa-solid fa-circle-plus"></i>
+            <p>Topping</p>
         </div>
     </section>
 
     <section id="menu-seblak">
-        <div class="deskripsi">
-            <img src="images/seblak.png" alt="Deskripsi Seblak">
-            <div class="deskripsi-text">
-                <h1>Tentang Seblak</h1>
-                <p><strong>[seblak mbak Ely punya]</strong></p>
-                <p>Masakan khas Sunda yang berasal dari wilayah Parahyangan dengan cita rasa gurih dan pedas. Seblak yang mulai populer sekitar tahun 2000an di Bandung, diduga di Garut dan Cianjur Selatan sudah ada kuliner seperti seblak sebelum jaman kemerdekaan.</p>
-                <p>Saat ini seblak kembali populer dan Seblak Mbak Ely hadir dengan rasa yang spektakuler untuk semua yang ingin merasakan cita rasa seblak yang khas dan nagih.</p>
-            </div>
+        <div class="section-header animate-on-scroll">
+            <h2>Pilihan Menu Utama</h2>
+            <p>Bestsellers dari Seblak Mbak Ely</p>
         </div>
-
-        <h1 class="section-title"><i class="fa-solid fa-utensils"></i> Pilihan Menu Utama</h1>
         
         <div class="grid-container">
-            <div class="card">
-                <img src="images/seblak ori.jpg" alt="Seblak Ori">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak ori.jpg" alt="Seblak Ori"></div>
                 <div class="card-content">
-                    <h2>Seblak Ori</h2>
+                    <h3>Seblak Ori</h3>
                     <p>Krupuk + Mie + Sayur</p>
-                    <div class="harga">12K</div>
+                    <div class="price-row">
+                        <span class="harga">Rp 12.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="images/seblak sosis.jpg" alt="Seblak Sosis Biasa">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak sosis.jpg" alt="Seblak Sosis Biasa"></div>
                 <div class="card-content">
-                    <h2>Seblak Sosis Kecil</h2>
+                    <h3>Seblak Sosis Kecil</h3>
                     <p>Sosis Kecil + Telur + Krupuk + Mie + Sayur</p>
-                    <div class="harga">14K</div>
+                    <div class="price-row">
+                        <span class="harga">Rp 14.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="images/seblak jamur enoki.jpg" alt="Seblak Sosis Jumbo">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak jamur enoki.jpg" alt="Seblak Sosis Jumbo"></div>
                 <div class="card-content">
-                    <h2>Seblak Sosis Jumbo</h2>
+                    <h3>Seblak Sosis Jumbo</h3>
                     <p>Sosis Jumbo + Telur + Krupuk + Mie + Sayur</p>
-                    <div class="harga">16K</div>
+                    <div class="price-row">
+                        <span class="harga">Rp 16.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="images/seblak bakso.jpg" alt="Seblak Bakso">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak bakso.jpg" alt="Seblak Bakso"></div>
                 <div class="card-content">
-                    <h2>Seblak Bakso</h2>
+                    <h3>Seblak Bakso</h3>
                     <p>Bakso Daging + Telur + Krupuk + Mie + Sayur</p>
-                    <div class="harga">17K</div>
+                    <div class="price-row">
+                        <span class="harga">Rp 17.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="images/seblak ely lengkap.jpg" alt="Seblak Seafood">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak ely lengkap.jpg" alt="Seblak Seafood"></div>
                 <div class="card-content">
-                    <h2>Seblak Seafood</h2>
-                    <p>Dumpling + Cikuwa + Kembang Cumi + Bakso Ikan + Telur + Krupuk + Mie + Sayur</p>
-                    <div class="harga">20K</div>
+                    <h3>Seblak Seafood</h3>
+                    <p>Dumpling + Cikuwa + Kembang Cumi + Bakso Ikan + Telur...</p>
+                    <div class="price-row">
+                        <span class="harga">Rp 20.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="images/seblak ely paling lengkap.jpg" alt="Seblak Spesial">
+            <div class="card animate-on-scroll">
+                <div class="img-wrap"><img src="images/seblak ely paling lengkap.jpg" alt="Seblak Spesial"></div>
                 <div class="card-content">
-                    <h2>Seblak Spesial</h2>
-                    <p>Dumpling + Cikuwa + Kembang Cumi + Bakso Ikan + Sosis Kecil + Bakso Daging Kecil + Telur + Mie + Krupuk + Sayur</p>
-                    <div class="harga">23K</div>
+                    <h3>Seblak Spesial</h3>
+                    <p>Dumpling + Cikuwa + Kembang Cumi + Bakso Ikan + Sosis...</p>
+                    <div class="price-row">
+                        <span class="harga">Rp 23.000</span>
+                        <i class="fa-solid fa-heart heart-icon"></i>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="promise-section animate-on-scroll">
+        <div class="deskripsi">
+            <div class="deskripsi-text">
+                <h2>Tentang Seblak</h2>
+                <p><strong>[Seblak Mbak Ely Punya]</strong></p>
+                <p>Masakan khas Sunda yang berasal dari wilayah Parahyangan dengan cita rasa gurih dan pedas. Seblak Mbak Ely hadir dengan rasa yang spektakuler untuk semua yang ingin merasakan cita rasa seblak yang khas, kental, dan nagih.</p>
+                
+                <div class="promise-badges">
+                    <div class="badge"><i class="fa-solid fa-leaf"></i><span>Bahan Segar</span></div>
+                    <div class="badge"><i class="fa-solid fa-fire-flame-curved"></i><span>Pedas Nendang</span></div>
+                    <div class="badge"><i class="fa-solid fa-motorcycle"></i><span>Siap Antar</span></div>
+                </div>
+            </div>
+            <img src="images/seblak.png" alt="Deskripsi Seblak">
         </div>
     </section>
 
     <section id="topping">
-        <h1 class="section-title"><i class="fa-solid fa-circle-plus"></i> Pilihan Topping</h1>
+        <div class="section-header animate-on-scroll">
+            <h2>Pilihan Topping</h2>
+            <p>Bikin seblakmu makin rame!</p>
+        </div>
         <div class="grid-container">
-            <div class="card">
-                <img src="images/422da73ef4216034fe6b4916a62f2d7c.jpg" alt="Krupuk Seblak">
-                <div class="card-content">
-                    <h2>Krupuk Seblak</h2>
-                    <div class="harga">1K / 8pcs</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/krupuk mawar.jpg" alt="Krupuk Mawar">
-                <div class="card-content">
-                    <h2>Krupuk Mawar</h2>
-                    <div class="harga">1K / 3pcs</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/telur.jpeg" alt="Telur">
-                <div class="card-content">
-                    <h2>Telur</h2>
-                    <div class="harga">4K</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/dumpling keju.jpg" alt="Dumpling">
-                <div class="card-content">
-                    <h2>Dumpling</h2>
-                    <p>Ori: 2K | Keju: 4K</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/sosis standar.jpg" alt="Sosis">
-                <div class="card-content">
-                    <h2>Sosis</h2>
-                    <p>Mini: 2K | Standar: 4K | Jumbo: 5K</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/crab stic.jpg" alt="Crabstick">
-                <div class="card-content">
-                    <h2>Crabstick</h2>
-                    <div class="harga">3K</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/jamur salju.jpg" alt="Jamur Salju">
-                <div class="card-content">
-                    <h2>Jamur Salju</h2>
-                    <div class="harga">6K</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/enoki 2.jpg" alt="Jamur Enoki">
-                <div class="card-content">
-                    <h2>Jamur Enoki</h2>
-                    <div class="harga">3K</div>
-                </div>
-            </div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/422da73ef4216034fe6b4916a62f2d7c.jpg" alt="Krupuk"></div><div class="card-content"><h3>Krupuk Seblak</h3><div class="price-row"><span class="harga">1K/8pcs</span></div></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/krupuk mawar.jpg" alt="Krupuk Mawar"></div><div class="card-content"><h3>Krupuk Mawar</h3><div class="price-row"><span class="harga">1K/3pcs</span></div></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/telur.jpeg" alt="Telur"></div><div class="card-content"><h3>Telur</h3><div class="price-row"><span class="harga">4K</span></div></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/dumpling keju.jpg" alt="Dumpling"></div><div class="card-content"><h3>Dumpling</h3><p>Ori 2K | Keju 4K</p></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/sosis standar.jpg" alt="Sosis"></div><div class="card-content"><h3>Sosis</h3><p>Mini 2K | Std 4K | Jumbo 5K</p></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/crab stic.jpg" alt="Crabstick"></div><div class="card-content"><h3>Crabstick</h3><div class="price-row"><span class="harga">3K</span></div></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/jamur salju.jpg" alt="Jamur Salju"></div><div class="card-content"><h3>Jamur Salju</h3><div class="price-row"><span class="harga">6K</span></div></div></div>
+            <div class="card animate-on-scroll"><div class="img-wrap"><img src="images/enoki 2.jpg" alt="Jamur Enoki"></div><div class="card-content"><h3>Jamur Enoki</h3><div class="price-row"><span class="harga">3K</span></div></div></div>
         </div>
     </section>
 
     <section id="minuman">
-        <h1 class="section-title"><i class="fa-solid fa-mug-saucer"></i> Minuman Segar</h1>
-        <div class="minuman-container">
+        <div class="section-header animate-on-scroll">
+            <h2>Minuman Segar</h2>
+        </div>
+        <div class="minuman-container animate-on-scroll">
             <div class="minuman-item"><span>Air Mineral Dingin</span><span class="harga">4K</span></div>
             <div class="minuman-item"><span>Es Teh</span><span class="harga">4K</span></div>
             <div class="minuman-item"><span>Es Nutrisari</span><span class="harga">6K</span></div>
@@ -184,9 +195,12 @@
     </section>
 
     <section id="kontak">
-        <h1 class="section-title"><i class="fa-solid fa-clipboard-list"></i> Form Pemesanan</h1>
+        <div class="section-header animate-on-scroll">
+            <h2>Form Pemesanan</h2>
+            <p>Pesan langsung diantar ke rumah!</p>
+        </div>
         
-        <div class="form-container">
+        <div class="form-container animate-on-scroll">
             <form id="formOrder">
                 <h3 class="form-section-title"><i class="fa-solid fa-user"></i> Data Pelanggan</h3>
                 <div class="form-group">
@@ -243,25 +257,29 @@
                 </div>
 
                 <div class="total-panel">
-                    <h2>Total Pembayaran: <br><span id="totalHargaDisplay">Rp 0</span></h2>
+                    <h2>Total: <span id="totalHargaDisplay">Rp 0</span></h2>
                 </div>
 
                 <button type="submit" id="btnSubmit"><i class="fa-solid fa-paper-plane"></i> Pesan Sekarang</button>
             </form>
         </div>
 
-        <div class="kontak-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.044031649036!2d112.1158!3d-7.8206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDknMTQuMiJTIDExMsKwMDYnNTYuOSJF!5e0!3m2!1sid!2sid!4v1689000000000!5m2!1sid!2sid" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="kontak-text">
-                <h3 style="margin-bottom: 15px;">Informasi Outlet</h3>
-                <p><i class="fa-solid fa-clock"></i> Buka: 09.00 WIB - 21.00 WIB</p>
-                <p><i class="fa-solid fa-location-dot"></i> Jl. Diponegoro, Pucang Anom, Sukorejo, Kec. Gurah, Kab. Kediri, Jawa Timur 64181</p>
-                <p><i class="fa-solid fa-phone"></i> +62 858-5207-2894</p>
-                <br>
-                <a href="https://wa.me/6285852072894" class="btn-pesan" style="text-align: center; width: 100%; max-width: 250px;"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Admin</a>
+        <div class="footer-box animate-on-scroll">
+            <div class="footer-content">
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.044031649036!2d112.1158!3d-7.8206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDknMTQuMiJTIDExMsKwMDYnNTYuOSJF!5e0!3m2!1sid!2sid!4v1689000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="kontak-text">
+                    <h3>Outlet Mbak Ely</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Jl. Diponegoro, Pucang Anom, Sukorejo, Kec. Gurah, Kab. Kediri, Jawa Timur 64181</p>
+                    <p><i class="fa-solid fa-clock"></i> Buka: 09.00 WIB - 21.00 WIB</p>
+                    <a href="https://wa.me/6285852072894" class="btn-pesan"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Admin</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Seblak Mbak Ely – @2004</p>
             </div>
         </div>
-        <p class="credit">© 2024 Seblak Mbak Ely | All Rights Reserved</p>
     </section>
 
     <script src="js/main.js"></script>
