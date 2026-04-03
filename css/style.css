@@ -1,542 +1,587 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-html {
-    scroll-behavior: smooth;
-  }
-body{
+/* =========================================
+   CSS DASAR & TIPOGRAFI
+========================================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    background-color: #eaeaea;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
-/* Navigation Bar */
-header{
-    position: absolute;
+body {
+    background-color: #fcfcfc;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 { color: #760F0F; }
+
+/* =========================================
+   NAVIGASI & HEADER
+========================================= */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
     top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 100;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo { height: 50px; }
+
+#nav {
+    display: flex;
+    gap: 20px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#nav a:hover { color: #760F0F; }
+
+#btn-hamburger, #btn-close {
+    display: none;
+    background: none;
+    border: none;
+    color: #760F0F;
+    cursor: pointer;
+}
+
+/* =========================================
+   LAYOUT UMUM (SECTION)
+========================================= */
+section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+/* =========================================
+   HERO SLIDER BERWARNA (DESAIN BARU)
+========================================= */
+.hero-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(118, 15, 15, 0.2);
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
     width: 100%;
 }
-.navigation{
-    padding: .3em 3em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-button#btn-hamburger,
-button#btn-close{
-    border: none;
-    background-color: transparent;
-    display: flex;
-    right: 0;
-    
-}
-#btn-hamburger i{
-    font-size: 2rem;
-    color: #A20405;
-}
-#logo{
-    width: 11vmax;
-    cursor: none;
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
-#nav.close{
-    display: none;
-    transform: translateX(50);
-}
-#nav.open{
-    transform: translateX(0);
-}
-#nav{
-    position: fixed;
-    padding: 1.5em;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 90vh;
-    background-color:#1f1f1f;
-    box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.33);
-    -webkit-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.33);
-    -moz-box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.33);
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;    
-}
-#btn-close i{
-    font-size: 2rem;
-    color: #fff;
-}
-#nav a{
-    color: #fff;
-    text-decoration: none;
-    padding: .5em;
-    font-size: 1.1rem;
-    transition: .5s;
-}
-#nav a:hover{
-    background-color: #A20405;
-}
-/* Seblak Section */
-#seblak{
-    height: 100vh;
-    background-image: url("../images/bg1.jpg");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img-seblak{
-    width: 30vmax;
-    margin-left: -60px;
-}
-.seblak-text{
+.seblak {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 5em;
-    color: #1f1f1f;
+    justify-content: space-between;
+    gap: 40px;
+    /* Gradasi Berani: Merah Marun ke Merah Terang */
+    background: linear-gradient(135deg, #760F0F 0%, #D83131 100%); 
+    padding: 70px 60px;
+    color: white;
 }
-.seblak-text h1{
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: .3em;
+
+.seblak img {
+    width: 100%;
+    max-width: 380px;
+    height: 380px; /* Menjaga ukuran tetap bulat jika menggunakan foto asli */
+    object-fit: cover;
+    filter: drop-shadow(0 20px 20px rgba(0,0,0,0.4));
+    animation: melayang 3s ease-in-out infinite;
 }
-.seblak-text h3{
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 2em;
-    margin-top: 0;
+
+@keyframes melayang {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
-.seblak-text a,
-.kontak-text a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 1em 2em;
-    border-radius: 1.5em;
-    background-color: #31CF12;
-    transition: .5s;
+
+/* Modifikasi teks untuk latar belakang gelap */
+.seblak-text h1 { 
+    font-size: 52px; 
+    margin-bottom: 15px; 
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
-.seblak-text a:hover,
-.kontak-text a:hover{
-    background-color: #29ac0f;
-}
-/* Menu Seblak Section */
-#menu-seblak{
-    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-menu.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 3em;
-}
-.deskripsi{
-    padding-top: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.img-deskripsi{
-    position: relative;
-    left: 60px;
-    width: 20vmax;
-}
-.deskripsi-text{
-    background-color: #FA6700;
-    border: 2px solid #fff;
-    border-radius: 2em;
-    color: #fff;
-    width: 500px;
-    padding: 3em 3em 3em 6em;
-}
-.deskripsi-text h1{
-    font-size: 2rem;
-    font-weight: 800;
+
+.seblak-text h3 { 
+    font-weight: 400; 
+    color: #ffebeb; 
+    margin-bottom: 35px; 
+    font-size: 22px;
     font-style: italic;
-    margin: 0;
 }
-.deskripsi-text p{
-    font-size: 1.2rem;
-    margin-top: .5em;
-}
-.menu-title h1{
-    margin-top: 2.5em;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.3rem;
-    font-weight: 800;
-    color: #A20405;
-}
-.menu-row{
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 1.2em;
-    margin-top: 1.2em;
-}
-.menu-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 1.3em;
-    padding: 2em;
-    width: 20%;
 
+/* Tombol pesan yang kontras */
+.seblak-text .btn-pesan {
+    background: #ffffff;
+    color: #760F0F;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-.img-menu{
-    width: 13vmax;
+
+.seblak-text .btn-pesan:hover { 
+    background: #ffebeb; 
+    transform: translateY(-3px);
 }
-.menu-text{
+
+/* --- KONTROL SLIDER --- */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #760F0F;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background: #ffffff;
+    transform: scale(1.3);
+}
+
+/* Responsif Mobile untuk Slider */
+@media (max-width: 768px) {
+    .seblak {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px 80px; /* Ruang ekstra di bawah untuk dots */
+    }
+    .seblak-text h1 { font-size: 36px; }
+    .seblak img { max-width: 280px; height: 280px; }
+    .slider-btn { display: none; } /* Sembunyikan panah di HP agar tidak sempit */
+}
+
+
+/* =========================================
+   HERO & DESKRIPSI (SEBLAK) - DESAIN BARU
+========================================= */
+.seblak {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
+    gap: 40px;
+    background: linear-gradient(135deg, #fffafa 0%, #ffffff 100%); 
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(118, 15, 15, 0.05); 
+    margin-bottom: 60px;
+    border: 1px solid #ffebeb;
 }
-.menu-text h1{
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-top: 1rem;
+
+.seblak img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.1));
+    animation: melayang 3s ease-in-out infinite;
+}
+
+@keyframes melayang {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.seblak-text h1 { 
+    font-size: 48px;
+    margin-bottom: 15px; 
+    line-height: 1.1;
+}
+
+.seblak-text h3 { 
+    font-weight: 400; 
+    color: #666; 
+    margin-bottom: 30px; 
+    font-size: 20px;
+    font-style: italic;
+}
+
+.btn-pesan {
+    display: inline-block;
+    background: #760F0F;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-pesan:hover { background: #a31515; }
+
+/* Desain Card Deskripsi */
+.deskripsi {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 60px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 60px;
+}
+
+.deskripsi img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 15px 15px 0px #ffebeb; 
+}
+
+.deskripsi-text h1 { 
+    font-size: 36px; 
+    margin-bottom: 10px; 
+    position: relative;
+    display: inline-block;
+}
+
+.deskripsi-text h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background: #760F0F;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.deskripsi-text p { 
+    margin-top: 15px; 
+    color: #555; 
+    text-align: justify; 
+    line-height: 1.8;
+}
+
+/* =========================================
+   KARTU MENU & TOPPING (GRID SYSTEM)
+========================================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h2 { font-size: 18px; margin-bottom: 5px; color: #333; }
+.card-content p { font-size: 13px; color: #777; margin-bottom: 15px; flex-grow: 1; }
+.harga { font-size: 20px; font-weight: 700; color: #760F0F; margin-top: auto; }
+
+/* =========================================
+   MINUMAN (LIST VIEW)
+========================================= */
+.minuman-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.minuman-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+}
+.minuman-item:last-child { border-bottom: none; }
+.minuman-item span { font-weight: 600; color: #444; }
+.minuman-item .harga { font-size: 16px; }
+
+/* =========================================
+   FORMULIR PEMESANAN (USER FRIENDLY)
+========================================= */
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 14px;
+}
+
+input[type="text"], 
+input[type="number"], 
+textarea, 
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fdfdfd;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #760F0F;
+    box-shadow: 0 0 0 3px rgba(118, 15, 15, 0.1);
+    background: #fff;
+}
+
+textarea { resize: vertical; }
+
+.topping-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+.topping-options label {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 400;
     margin-bottom: 0;
 }
-.menu-text{
+
+.topping-options label:hover {
+    border-color: #760F0F;
+    background: #fffafa;
+}
+
+.topping-options input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #760F0F;
+    cursor: pointer;
+}
+
+.total-panel {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px dashed #760F0F;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.total-panel h2 {
     margin: 0;
-}
-.menu-harga{
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 24px;
+    color: #760F0F;
 }
 
-/* Kartu Maroon */
-.menu-card.maroon{
-    color:#fff;
-    background-color: #A20405;
-}
-.menu-harga.maroon{
-    color: #FFFC00;
-}
-/* Kartu White */
-.menu-card.white{
-    color:#1f1f1f;
-    background-color: #fff;
-}
-.menu-harga.white{
-    color: #A20405;
+button[type="submit"] {
+    width: 100%;
+    background: #760F0F;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(118, 15, 15, 0.2);
 }
 
+button[type="submit"]:hover {
+    background: #a31515;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(118, 15, 15, 0.3);
+}
 
-/* Topping Section */
-.topping{
-    background-color: #A20405;
-    background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 10em;
+button[type="submit"]:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
-.topping-title{
-    padding: 3em 5em;
-}
-.topping-title h1{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-.topping-row{
+
+/* =========================================
+   KONTAK & FOOTER
+========================================= */
+.kontak-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1.3rem;
-    margin-bottom: 2em;
+    gap: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
 }
-.topping-card{
+
+.kontak-container iframe {
+    flex: 1;
+    min-width: 300px;
+    height: 250px;
+}
+
+.kontak-text {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    color: #fff;
-
-}
-.topping-card h1{
-    font-size: 1.3rem;
-    margin: .5rem;
-    text-align: center;
-
-}
-.topping-harga {
-    color: #FFFC00;
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-    font-size: 1.3rem;
-}
-.topping-custom{
-    padding: 0 .7em;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.topping-custom h1{
-    margin-top: .2em;
-    font-weight: 500;
-}
-.topping-img{
-    height: 15vmax;
-    background-color: #760F0F;
-    border-radius: 1rem;
-    padding: .8em;
-}
-/* Minuman Section */
-.minuman{
-    height: 100vh;
-    color: #fff;
-    background-color: #A20405;
-    background-image: url("../images/web-seblak.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding-bottom: 10em;
-    padding-top: 10em;
-}
-.minuman-img{
-    height: 40vmax;
-}
-.minuman-title h1,
-.kontak-title h1{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-.minuman-text{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2em;
-    background-color: rgba(118, 15, 15,.5);
-    backdrop-filter: blur(3px);
-    border-radius: 1em;
-    border: 2px solid #fff;
-    margin-top: 1em;
-    padding: 1em 2em;
-    width: 40vmax;
-}
-.minuman-text h2{
-    font-size: 1.3rem;
-}
-.minuman-harga{
-    color: #FFFC00;
 }
 
-/* Kontak Section */
-.kontak{
-    background-color: #4a0606;
-    color: #fff;
-    padding-top: 3em;
-    padding-bottom: 2em;
-}
-.kontak-title h1{
+.kontak-text p { margin-bottom: 10px; display: flex; align-items: center; gap: 10px;}
+.kontak-text i { color: #760F0F; width: 20px; text-align: center;}
+
+.credit {
     text-align: center;
+    margin-top: 50px;
+    color: #888;
+    font-size: 14px;
 }
 
-.kontak-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 2em;
-    padding: 0 2em;
-}
-.kontak-container iframe{
-    width: 35%;
-    height: 300px;
-}
-.kontak-text {
-    padding: 0 2em;
-    font-size: 1.1rem;
-}
-.credit{
-    padding: 0 3em;
-}
-@media only screen and (max-width: 800px) {
-    .seblak-text{
-        padding: 2em;
-    }
-    .seblak-text h1{
-        font-size: 2.3em;
-    }
-    .deskripsi{
-        padding: 2em;
-    }
-    .menu-text h1{
-        font-size: 1.3rem;
-    }
-    .menu-text p{
-        font-size:1rem;
-    }
-}
-@media only screen and (min-width: 601px) {
-    .menu-list{
-        display: none;
-    }
-}
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    #nav{
-        width: 45%;
-    }
-    .seblak-text{
-        padding: 0;
-    }
-    .seblak-text h1{
-        line-height: 1em;
-        font-size: 2rem;
-    }
-    .seblak-text h3{
-        font-size: 1rem;
-    }
-    /* Seblak Section */
-    #seblak{
+/* =========================================
+   RESPONSIVE (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    #btn-hamburger { display: block; font-size: 24px; }
+    #btn-close { display: block; margin-left: auto; margin-bottom: 20px; font-size: 24px;}
+    
+    #nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: #fff;
         flex-direction: column;
-    }
-    .seblak-text{
-        text-align: center;
-        padding-top: 0;
-    }
-    /* Seblak Section */
-    .deskripsi{
-        padding-top: 0;
-        flex-direction: column;
-    }
-    .img-deskripsi{
-        left: 0;
-    }
-    .deskripsi-text{
-        border: none;
-        border-radius: 0px;
-        background-color: transparent;
-        padding: 2rem 0;
-        color: #1f1f1f;
-        width: 60vw;
-    }
-    .deskripsi-text h1{
-        font-size: 1.5rem;
-    }
-    .deskripsi-text p{ 
-        font-size: 1rem;
-    }
-    /* Menu Seblak Section */
-    #menu-seblak{
-        background-color: #FFC234;
-        background-image: none;
-    }
-    .menu-title h1{
-        margin: 0;
-        font-size: 1.3rem;
-    }
-    .menu-row{
-        display: none;
-    }
-    .menu-list{
-        padding: 2em;
-    }
-    .menu-list-row{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid #760F0F;
-        padding: .5em 0;
-    }
-    .menu-list-seblak h1{
-        margin-bottom: .3em;
-        color: #A20405;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: 800;
-    }
-    .menu-list-seblak p{
-        margin: 0;
-        color: #1f1f1f;
-        font-size: .8rem;
-        line-height: 1rem;
-    }
-    .menu-list-harga{
-        font-weight: 800;
-        font-size: 1.3rem;
-        color: #A20405;
-    }
-    /* Topping Section */
-    .topping{
-        background-image: url(https://jinggajilca.github.io/web-seblak-incess/images/bg-topping-sm.png);
-        background-position: bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: #A20405;
-    }
-    .topping-title h1,
-    .minuman-title h1,
-    .kontak-title h1{
-        margin: 0;
-        font-size: 1.3rem;
-        text-align: center;
-    }
-    .topping-card h1,
-    .minuman-nama h2,
-    .minuman-harga h2,
-    .kontak-text p{
-        font-size: 1rem;
-    }
-    .topping-harga{
-        font-size: 1rem;
+        padding: 30px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
     }
 
-    /* Minuman Section */
-    .minuman{
-        background-size: contain;
-        background-position: top;
-        background-repeat: no-repeat;
-        padding: 3em 0;
-    }
-    .minuman-text{
-        border: none;
-        background-color: transparent;
-    }
-    .minuman-img{
-        display: none;
-    }
-    /* Kontak Section */
-    .kontak-container{
+    #nav.open { right: 0; }
+
+    .seblak, .deskripsi {
         flex-direction: column;
-        align-items: center;
-    }
-    .kontak-container iframe{
-        width: 85%;
-    }
-    .kontak-text a{
-        font-size: 1rem;
-        line-height: 1em;
-    }
-    .credit{
-        margin-top: 5em;
         text-align: center;
-        font-size: .8rem;
+        padding: 30px 20px;
     }
 
+    .deskripsi-text h1::after { left: 20%; }
+    .deskripsi-text p { text-align: center; }
+    .deskripsi img { box-shadow: 10px 10px 0px #ffebeb; }
+
+    .kontak-container { flex-direction: column; }
 }
