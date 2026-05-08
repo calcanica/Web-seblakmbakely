@@ -196,34 +196,77 @@
 
     <section id="kontak">
         <div class="section-header animate-on-scroll">
-            <h2>Form Pemesanan</h2>
-            <p>Pesan langsung diantar ke rumah!</p>
+            <h2>Pesan Sekarang</h2>
+            <p>Nikmati kelezatan Seblak Mbak Ely di tempat atau di rumah!</p>
         </div>
         
         <div class="form-container animate-on-scroll">
+            <div class="live-status-bar">
+                <div class="status-item">
+                    <i class="fa-solid fa-clock"></i> 
+                    <span>Estimasi: <strong id="estimasi-waktu">15-20 Menit</strong></span>
+                </div>
+                <div class="status-item">
+                    <i class="fa-solid fa-chair"></i> 
+                    <span>Meja: <strong id="status-meja" class="status-ready">Tersedia</strong></span>
+                </div>
+            </div>
+
             <form id="formOrder">
                 <h3 class="form-section-title"><i class="fa-solid fa-user"></i> Data Pelanggan</h3>
-                <div class="form-group">
-                    <label for="nama">Nama Lengkap</label>
-                    <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="notelp">Nomor WhatsApp Aktif</label>
-                    <input type="number" id="notelp" name="notelp" placeholder="Contoh: 08123456789" required>
-                </div>
-                <div class="form-group">
-                    <label for="alamat">Alamat Pengiriman</label>
-                    <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat Lengkap (Jalan, RT/RW, Patokan)" rows="3" required></textarea>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Salsabila" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notelp">Nomor WhatsApp</label>
+                        <input type="number" id="notelp" name="notelp" placeholder="08123xxx" required>
+                    </div>
                 </div>
 
-                <h3 class="form-section-title" style="margin-top: 30px;"><i class="fa-solid fa-bowl-food"></i> Detail Pesanan</h3>
                 <div class="form-group">
-                    <label for="pilihan-seblak">Pilih Menu Seblak Utama <span style="color:red;">*</span></label>
-                    <select id="pilihan-seblak" required>
+                    <label>Metode Pemesanan</label>
+                    <div class="method-options">
+                        <label class="radio-card">
+                            <input type="radio" name="order_type" value="Dine In" checked>
+                            <div class="card-content">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Makan di Tempat</span>
+                            </div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="order_type" value="Take Away">
+                            <div class="card-content">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Bawa Pulang</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="group-meja" class="form-group">
+                    <label for="no_meja">Nomor Meja</label>
+                    <select id="no_meja">
+                        <option value="1">Meja 01</option>
+                        <option value="2">Meja 02</option>
+                        <option value="3">Meja 03</option>
+                        <option value="4">Meja 04</option>
+                        <option value="5">Meja 05</option>
+                    </select>
+                </div>
+
+                <div id="group-alamat" class="form-group" style="display:none;">
+                    <label for="alamat">Alamat Pengiriman</label>
+                    <textarea id="alamat" name="alamat" placeholder="Masukkan alamat lengkap pengiriman..." rows="2"></textarea>
+                </div>
+
+                <h3 class="form-section-title"><i class="fa-solid fa-bowl-food"></i> Detail Pesanan</h3>
+                <div class="form-group">
+                    <label for="pilihan-seblak">Pilih Seblak Utama</label>
+                    <select id="pilihan-seblak" onchange="hitungTotal()" required>
                         <option value="0" data-nama="-">-- Pilih Seblak --</option>
                         <option value="12000" data-nama="Seblak Ori">Seblak Ori (Rp 12.000)</option>
-                        <option value="14000" data-nama="Seblak Sosis Kecil">Seblak Sosis Kecil (Rp 14.000)</option>
-                        <option value="16000" data-nama="Seblak Sosis Jumbo">Seblak Sosis Jumbo (Rp 16.000)</option>
                         <option value="17000" data-nama="Seblak Bakso">Seblak Bakso (Rp 17.000)</option>
                         <option value="20000" data-nama="Seblak Seafood">Seblak Seafood (Rp 20.000)</option>
                         <option value="23000" data-nama="Seblak Spesial">Seblak Spesial (Rp 23.000)</option>
@@ -231,56 +274,36 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Pilih Topping Tambahan (Opsional)</label>
-                    <div class="topping-options">
-                        <label><input type="checkbox" class="cb-topping" value="1000" data-nama="Krupuk Seblak"> Krupuk Seblak (+1K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="1000" data-nama="Krupuk Mawar"> Krupuk Mawar (+1K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="1000" data-nama="Mie"> Mie (+1K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="4000" data-nama="Telur"> Telur (+4K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="2000" data-nama="Sawi"> Sawi (+2K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="3000" data-nama="Crabstick"> Crabstick (+3K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="4000" data-nama="Dumpling Keju"> Dumpling Keju (+4K)</label>
-                        <label><input type="checkbox" class="cb-topping" value="3000" data-nama="Jamur Enoki"> Jamur Enoki (+3K)</label>
+                    <label>Tingkat Kepedasan</label>
+                    <div class="spicy-level-box">
+                        <input type="range" id="level-pedas" min="0" max="5" value="0" step="1">
+                        <div class="spicy-labels">
+                            <span>Biasa</span>
+                            <span>Pedas Banget!</span>
+                        </div>
+                        <p id="label-pedas-val">🔥 Level 0 (Original)</p>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="pilihan-minuman">Pilih Minuman (Opsional)</label>
-                    <select id="pilihan-minuman">
-                        <option value="0" data-nama="Tidak Ada">-- Tanpa Minuman --</option>
-                        <option value="4000" data-nama="Air Mineral Dingin">Air Mineral Dingin (Rp 4.000)</option>
-                        <option value="4000" data-nama="Es Teh">Es Teh (Rp 4.000)</option>
-                        <option value="6000" data-nama="Es Nutrisari">Es Nutrisari (Rp 6.000)</option>
-                        <option value="8000" data-nama="Es Teh Tarik">Es Teh Tarik (Rp 8.000)</option>
-                        <option value="10000" data-nama="Es Susu Coklat">Es Susu Coklat (Rp 10.000)</option>
-                    </select>
+                    <label>Topping Tambahan</label>
+                    <div class="topping-grid">
+                        <label class="check-item"><input type="checkbox" class="cb-topping" value="1000" data-nama="Krupuk" onchange="hitungTotal()"> Krupuk (+1K)</label>
+                        <label class="check-item"><input type="checkbox" class="cb-topping" value="4000" data-nama="Telur" onchange="hitungTotal()"> Telur (+4K)</label>
+                        <label class="check-item"><input type="checkbox" class="cb-topping" value="3000" data-nama="Enoki" onchange="hitungTotal()"> Enoki (+3K)</label>
+                        <label class="check-item"><input type="checkbox" class="cb-topping" value="4000" data-nama="Dumpling" onchange="hitungTotal()"> Dumpling (+4K)</label>
+                    </div>
                 </div>
-
-                <div class="total-panel">
-                    <h2>Total: <span id="totalHargaDisplay">Rp 0</span></h2>
+                <div class="total-section">
+                    <p>Total Pembayaran:</p>
+                    <h2 id="totalHargaDisplay">Rp 0</h2>
                 </div>
-
-                <button type="submit" id="btnSubmit"><i class="fa-solid fa-paper-plane"></i> Pesan Sekarang</button>
+                <button type="submit" id="btnSubmit" class="submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim Pesanan ke WhatsApp
+                </button>
             </form>
         </div>
-
-        <div class="footer-box animate-on-scroll">
-            <div class="footer-content">
-                <div class="map-wrap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.044031649036!2d112.1158!3d-7.8206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDknMTQuMiJTIDExMsKwMDYnNTYuOSJF!5e0!3m2!1sid!2sid!4v1689000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="kontak-text">
-                    <h3>Outlet Mbak Ely</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> Jl. Diponegoro, Pucang Anom, Sukorejo, Kec. Gurah, Kab. Kediri, Jawa Timur 64181</p>
-                    <p><i class="fa-solid fa-clock"></i> Buka: 09.00 WIB - 21.00 WIB</p>
-                    <a href="https://wa.me/6285852072894" class="btn-pesan"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Admin</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Seblak Mbak Ely – @2004</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <script src="js/main.js"></script>
 </body>
